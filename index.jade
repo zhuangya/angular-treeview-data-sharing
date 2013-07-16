@@ -1,0 +1,20 @@
+!!!5
+html(lang='zh', ng-app='playApp')
+  head
+    meta(charset='utf-8')
+    title AngularJS Playground
+    :stylus
+      .tagList
+        position fixed
+        right 0
+        top 0
+        background-color rgba(111, 111, 111, 0.8)
+        color #333
+        width 400px
+        min-height 200px
+  body(ng-controller='StageCtrl')
+    .tagList
+      span(ng-repeat='t in tags') {{t.name}} ({{t.id}})
+    .tree(tag-tree, pick='list(tag)', tree='tree')
+    script(src='./vendor/js/angular.min.js')
+    script(src='./main.js')
